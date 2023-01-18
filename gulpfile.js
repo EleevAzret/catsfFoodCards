@@ -45,6 +45,12 @@ function img() {
 					.pipe(gulp.dest('./dist/img'));
 }
 
+//task for transfer all fonts in dist directory
+function fonts() {
+  return gulp.src('./src/fonts/**/*')
+					.pipe(gulp.dest('./dist/fonts'));
+}
+
 //task that looks for changes in files
 function watch() {
 	browserSync.init({
@@ -58,8 +64,9 @@ function watch() {
 	gulp.watch('./src/styles/**/*.scss', styles);
 	gulp.watch('./src/styles/default/**/*', defaultStyles);
 	gulp.watch('./src/img/**/*', img);
+  gulp.watch('./src/fonts/**/*', fonts);
 }
 
-let build = gulp.series(clean, gulp.parallel(html, styles, js, img), watch);
+let build = gulp.series(clean, gulp.parallel(html, styles, js, img, fonts), watch);
 
 gulp.task('build', build);

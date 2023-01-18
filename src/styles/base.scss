@@ -1,0 +1,35 @@
+*, ::after, ::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $black;
+}
+
+.main {
+  width: 100vw;
+  background: linear-gradient(180deg, rgba($black, .5) 0%, rgba($black, 5e-05) 50%, rgba($black, .5) 100%), url(../img/main-background_x2.png);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8rem;
+}
+

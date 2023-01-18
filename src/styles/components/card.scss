@@ -1,0 +1,96 @@
+.card {
+  max-width: 32rem;
+  font-family: $trebuchet;
+  --color: var(--light-blue);
+
+  &__mask {
+    padding: .4rem;
+    background-color: var(--color);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__body {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    background-color: $white;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__text {
+    padding-left: 4.8rem;
+  }
+
+  &__upper-text {
+    color: $dark-gray;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description-list {
+    list-style-type: none;
+    color: $dark-gray;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  &__cat-image {
+    width: 30rem;
+    height: auto;
+    position: relative;
+    top: 1rem;
+  }
+
+  &__amount {
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 10rem;
+    background-color: var(--color);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number {
+    font-size: 4.2rem;
+    line-height: 4.5rem;
+  }
+
+  &__weight {
+    font-size: 2.1rem;
+    line-height: 2.2rem;
+  }
+
+  &__link {
+    color: $white;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    text-align: center;
+
+    a {
+      color: var(--color);
+    }
+  }
+}
