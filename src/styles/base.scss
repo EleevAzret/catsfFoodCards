@@ -28,6 +28,10 @@ body {
 .main {
   width: 100vw;
   background: linear-gradient(180deg, rgba($black, .5) 0%, rgba($black, 5e-05) 50%, rgba($black, .5) 100%), url(../img/main-background_x2.png);
+
+  @include media(m) {
+    background: linear-gradient(180deg, rgba($black, .5) 0%, rgba($black, 5e-05) 50%, rgba($black, .5) 100%), url(../img/main-background.png);
+  }
 }
 
 .wrapper {
