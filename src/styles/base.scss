@@ -6,6 +6,18 @@
 
 html {
 	font-size: 62.5%;
+
+  @include media(m) {
+    font-size: 56.25%;
+  }
+
+  @include media(s) {
+		font-size: 50%;
+	}
+
+  @include media(xs) {
+		font-size: 30%;
+	}
 }
 
 body {
@@ -21,6 +33,7 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100vh;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,8 +41,19 @@ body {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 8rem;
+
+  @include media(m) {
+    gap: 4rem;
+  }
+
+  @include media(s) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
