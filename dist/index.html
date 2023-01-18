@@ -6,9 +6,8 @@
   <meta name="description" content="food for your beloved cats">
   <meta name="keywords" content="cat,food,store,chicken,fish">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="styles/main.css">
-
+  <script src="js/app.js" defer></script>
   <title>Cat Food Store</title>
 </head>
 <body>
@@ -16,7 +15,7 @@
     <div class="wrapper">
       <h2 class="title_second mb25">Ты сегодня покормил кота?</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card" data-taste="fuagra">
           <div class="card__mask">
             <div class="card__body">
               <div class="card__text">
@@ -35,9 +34,9 @@
               </div>
             </div>
           </div>
-          <p class="card__link">Чего сидишь? Порадуй котэ,<a href="#">купи.</a></p>
+          <p class="card__link">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p>
         </div>
-        <div class="card selected">
+        <div class="card selected" data-taste="fish">
           <div class="card__mask">
             <div class="card__body">
               <div class="card__text">
@@ -56,9 +55,9 @@
               </div>
             </div>
           </div>  
-          <p class="card__link">Чего сидишь? Порадуй котэ,<a href="#">купи.</a></p>
+          <p class="card__link">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p>
         </div>
-        <div class="card disabled">
+        <div class="card disabled" data-taste="chicken">
           <div class="card__mask">
             <div class="card__body">
               <div class="card__text">
@@ -78,7 +77,7 @@
               </div>
             </div>
           </div>
-          <p class="card__link">Чего сидишь? Порадуй котэ,<a href="#">купи.</a></p>
+          <p class="card__link">Чего сидишь? Порадуй котэ, <a href="#">купи.</a></p>
         </div>
       </div>
     </div>

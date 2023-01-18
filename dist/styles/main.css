@@ -8,10 +8,10 @@
   --black: #000000;
   --dark-gray: #666666;
   --light-gray: #B3B3B3;
-  --light-blue: #1698D9;
-  --dark-blue: #2EA8E6;
-  --light-pink: #D91667;
-  --dark-pink: #E52E7A;
+  --dark-blue: #1698D9;
+  --light-blue: #2EA8E6;
+  --dark-pink: #D91667;
+  --light-pink: #E52E7A;
   --yellow: #FFFF66;
 }
 
@@ -53,21 +53,28 @@ body {
 }
 
 .card {
-  max-width: 32rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  --color: var(--light-blue);
+  --color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.card *:not(.card__link, .card__upper-text) {
+  pointer-events: none;
 }
 
 .card__mask {
+  max-width: 32rem;
   padding: 0.4rem;
   background-color: var(--color);
   -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
   border-radius: 1rem;
   margin-bottom: 1.5rem;
+  transition: all 0.2s;
 }
 
 .card__body {
+  max-width: 32rem;
   -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
   background-color: #FFFFFF;
@@ -86,6 +93,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.9rem;
   margin-bottom: 5rem;
+  transition: all 0.2s;
 }
 
 .card__title {
@@ -128,6 +136,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
 }
 
 .card__number {
@@ -149,6 +158,53 @@ body {
 
 .card__link a {
   color: var(--color);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  --color: var(--light-blue);
+}
+
+.card.selected {
+  --color: var(--dark-pink);
+}
+
+.card.selected:hover {
+  --color: var(--light-pink);
+}
+
+.card.selected:hover .card__upper-text {
+  color: var(--color);
+}
+
+.card.disabled {
+  --color: var(--light-gray);
+  color: var(--color);
+  cursor: no-drop;
+}
+
+.card.disabled .card__body {
+  background-color: #F2F2F2;
+}
+
+.card.disabled .card__text {
+  opacity: 0.5;
+}
+
+.card.disabled .card__upper-text {
+  color: var(--color);
+}
+
+.card.disabled .card__description-list {
+  color: var(--color);
+}
+
+.card.disabled .card__cat-image {
+  opacity: 0.5;
+}
+
+.card.disabled .card__link {
+  color: #FFFF66;
 }
 
 .title_second {
